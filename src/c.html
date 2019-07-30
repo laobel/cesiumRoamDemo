@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <title>page C</title>
+    <script src="https://cesiumjs.org/Cesium/Build/CesiumUnminified/Cesium.js"></script>
+    <script src="./ExtendCesium.js"></script>
+    <style>
+        @import url(https://cesiumjs.org/Cesium/Build/CesiumUnminified/Widgets/widgets.css);
+
+        html,body,#cesiumContainer{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<div id="cesiumContainer"></div>
+
+<div style="position: absolute; float: left;left: 10px;top: 20px; margin-right: 100px; z-index: 999999;">
+    <input id="start" type="button" value="开始" class="cesium-button">
+    <input id="ostart" type="button" value="主从开始" class="cesium-button">
+    <input id="stop" type="button" value="停止" class="cesium-button">
+    <input id="exit" type="button" value="退出" class="cesium-button">
+</div>
+<script>
+    var viewer = new Cesium.Viewer('cesiumContainer',{
+        baseLayerPicker : false,
+        geocoder:false,
+        homeButton:false,
+        navigationHelpButton:false,
+        timeline:false,
+        animation:false,
+    });
+
+    viewer.imageryLayers.removeAll();
+
+    viewer.camera.setView({
+        destination: Cesium.Cartesian3.fromDegrees(123.46387835908175, 34.4037510851303, 40080858.789247796),
+        orientation: {
+            heading: Cesium.Math.toRadians(338.7857766503062),
+            //pitch:Cesium.Math.toRadians(-30.844203876599106),
+            pitch:Cesium.Math.toRadians(-90),
+            roll: Cesium.Math.toRadians(359.93813529476006)
+        }
+    });
+
+
+    var tdtImg_all=new Cesium.WebMapTileServiceImageryProvider({
+        url: "http://localhost:8080/dist/tdtImg_all/{TileMatrix}/{TileCol}/{TileRow}.jpg",
+        layer: "tdtImgTiles",
+        style: "default",
+        format: "image/jpeg",
+        tileMatrixSetID: "GoogleMapsCompatible",
+        minimumLevel:0,
+        maximumLevel: 6,
+        show: true
+    });
+    viewer.imageryLayers.addImageryProvider(tdtImg_all);
+
+    //初始化
+    viewer.clock.clockRange = Cesium.ClockRange.LOOP_STOP; //Loop at the end
+    viewer.clock.multiplier = 0.001;
+
+    var start = Cesium.JulianDate.fromDate(new Date(2017,8,22,18,27,37));
+
+    var simplyRoam=new SimplyRoam(viewer);
+    var target=undefined;
+    var makeTimeStr=function (value) {
+        var time=Cesium.JulianDate.addSeconds(start, value, new Cesium.JulianDate());
+        time=time.toString();
+
+        time=time.replace(/-/g,',');
+        time=time.replace(/T/g,',');
+        time=time.replace(/:/g,',');
+        time=time.replace(/Z/g,'');
+
+        time=time.split(',');
+        time[1]=parseInt(time[1])-1;
+        time[3]=parseInt(time[3])+8;
+
+        time=time.toString();
+
+        return time;
+    };
+
+    window.addEventListener("storage", function (e) {
+        var flags = localStorage.getItem("flags");
+        if(flags==="1"){
+            localStorage.setItem("flags",'0');
+
+            var datas=localStorage.getItem("datas");
+
+            if(!Cesium.defined(datas) || datas===""){
+                return;
+            }
+            datas=JSON.parse(datas);
+            var gpsArr = [];
+
+            for(var i = 0; i < datas.length - 1; i++) {
+                var obj = {};
+                obj.x = parseFloat(datas[i][4]);
+                obj.y = parseFloat(datas[i][5]);
+                obj.z = parseFloat(datas[i][6]);
+                obj.time = makeTimeStr(10*i);
+                obj.label = datas[i][0] + '-' + datas[i][1];
+
+                if(isNaN(obj.x)||isNaN(obj.y)||isNaN(obj.z)){
+                    continue;
+                }
+
+                gpsArr.push(obj);
+            }
+
+
+            if(Cesium.defined(target)){
+                target=target.destroy();
+            }
+
+            target=new SimplyRoam.TrackTarget(simplyRoam,{
+                icon:{
+                    position:Cesium.Cartesian3.fromDegrees(gpsArr[0].x,gpsArr[0].y,gpsArr[0].z)
+                },
+                line:{
+                    show:true
+                },
+                start:"2017,8,22,18,27,37",
+                stop:"2020,8,22,16,34,16"
+            });
+
+            target.addPositonsWithTime(gpsArr,function() {
+                viewer.zoomTo(target.line);
+                target.playBack(false,10);
+            });
+        }
+    });
+
+    document.getElementById('start').onclick=function(e) {
+        if(Cesium.defined(target)){
+            viewer.zoomTo(target.line);
+            target.playBack(false,10);
+        }
+    };
+
+    document.getElementById('ostart').onclick=function(e) {
+        if(Cesium.defined(target)){
+            viewer.zoomTo(target.line);
+            viewer.trackedEntity=target.track;
+            target.playBack(true,10);
+        }
+    };
+
+    document.getElementById('stop').onclick=function(e) {
+        if(e.target.value==='停止'){
+            viewer.clockViewModel.shouldAnimate = false;
+            e.target.value='开始';
+        }else {
+            e.target.value='停止';
+            viewer.clockViewModel.shouldAnimate = true;
+        }
+    };
+
+    document.getElementById('exit').onclick=function(e) {
+        target=target.destroy();
+    };
+
+</script>
+</body>
+</html>

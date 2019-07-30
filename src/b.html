@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <title>page B</title>
+    <script src="https://cesiumjs.org/Cesium/Build/CesiumUnminified/Cesium.js"></script>
+    <script src="./ExtendCesium.js"></script>
+    <style>
+        @import url(https://cesiumjs.org/Cesium/Build/CesiumUnminified/Widgets/widgets.css);
+
+        html,body,#cesiumContainer{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<div id="cesiumContainer"></div>
+
+<div style="position: absolute; float: left;left: 10px;top: 20px; margin-right: 100px; z-index: 999999;">
+    <input id="untracked" type="button" value="锁定飞机" class="cesium-button">
+    <input id="lineshow" type="button" value="隐藏线" class="cesium-button">
+</div>
+<script>
+    var viewer = new Cesium.Viewer('cesiumContainer',{
+        baseLayerPicker : false,
+        geocoder:false,
+        homeButton:false,
+        navigationHelpButton:false,
+        timeline:false
+    });
+
+    viewer.imageryLayers.removeAll();
+
+    viewer.camera.setView({
+        destination: Cesium.Cartesian3.fromDegrees(123.46387835908175, 34.4037510851303, 40080858.789247796),
+        orientation: {
+            heading: Cesium.Math.toRadians(338.7857766503062),
+            //pitch:Cesium.Math.toRadians(-30.844203876599106),
+            pitch:Cesium.Math.toRadians(-90),
+            roll: Cesium.Math.toRadians(359.93813529476006)
+        }
+    });
+
+
+    var tdtImg_all=new Cesium.WebMapTileServiceImageryProvider({
+        url: "http://localhost:8080/dist/tdtImg_all/{TileMatrix}/{TileCol}/{TileRow}.jpg",
+        layer: "tdtImgTiles",
+        style: "default",
+        format: "image/jpeg",
+        tileMatrixSetID: "GoogleMapsCompatible",
+        minimumLevel:0,
+        maximumLevel: 6,
+        show: true
+    });
+    viewer.imageryLayers.addImageryProvider(tdtImg_all);
+
+    //初始化
+    var simplyRoam=new SimplyRoam(viewer);
+    var route=undefined;
+    var addGPS=undefined;
+    window.addEventListener("storage", function (e) {
+        var datas=localStorage.getItem("datas");
+
+        if(!Cesium.defined(datas) || datas===""){
+            return;
+        }
+        var gpsArr = JSON.parse(datas);
+
+        if(Cesium.defined(route)){
+            clearInterval(addGPS);
+            route.destroy();
+        }
+
+        route=new SimplyRoam.Routes(simplyRoam);
+
+        var n=0;
+        addGPS=setInterval(function () {
+            if(n===gpsArr.length){
+                clearInterval(addGPS);
+            }else {
+
+                var lon = parseFloat(gpsArr[n][4]);
+                var lat = parseFloat(gpsArr[n][5]);
+                var height = parseFloat(gpsArr[n][6]);
+                var heading = parseFloat(gpsArr[n][7]);
+                var pitch = parseFloat(gpsArr[n][8]);
+                var roll = parseFloat(gpsArr[n][9]);
+
+                if(isNaN(lon)||isNaN(lat)||isNaN(height)||isNaN(heading)||isNaN(pitch)||isNaN(roll)){
+                    n++;
+                    return;
+                }
+
+                var position = Cesium.Cartesian3.fromDegrees(lon, lat, height);
+
+                var hpr = new Cesium.HeadingPitchRoll(Cesium.Math.toRadians(heading), Cesium.Math.toRadians(pitch), Cesium.Math.toRadians(roll));
+                var orientation = Cesium.Transforms.headingPitchRollQuaternion(position, hpr);
+
+                route.addPoint(position,orientation);
+
+                if(n<1){
+                    route.tracked(false);
+                }
+                n++;
+            }
+        },200);
+    });
+
+    document.getElementById('untracked').onclick=function(e) {
+        if(e.target.value==='取消锁定飞机'){
+            route.tracked(false);
+            e.target.value='锁定飞机';
+        }else {
+            e.target.value='取消锁定飞机';
+            route.tracked(true);
+        }
+    };
+
+    document.getElementById('lineshow').onclick=function(e) {
+        if(e.target.value==='隐藏线'){
+            route.lineShow(false);
+            e.target.value='显示线';
+        }else {
+            e.target.value='隐藏线';
+            route.lineShow(true);
+        }
+    };
+</script>
+</body>
+</html>

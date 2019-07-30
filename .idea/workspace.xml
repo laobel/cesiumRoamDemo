@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="88315994-9d18-421e-955f-7dccd48edf6b" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/a.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/b.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="70" selection-start-line="8" selection-start-column="70" selection-end-line="8" selection-end-column="70" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/c.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1102">
+              <caret line="58" column="7" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/index_roam.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="26" selection-start-line="26" selection-end-line="37" selection-end-column="6" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/d.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ExtendCesium.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1805">
+              <caret line="149" column="37" selection-start-line="149" selection-start-column="37" selection-end-line="149" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#39#0" />
+                <element signature="e#763#856#0" />
+                <element signature="e#944#1674#0" />
+                <element signature="e#1781#2260#0" />
+                <element signature="e#1841#2250#0" />
+                <element signature="e#1932#2236#0" />
+                <element signature="e#2265#2663#0" />
+                <element signature="e#2314#2653#0" />
+                <element signature="e#2415#2639#0" />
+                <element signature="e#3049#3153#0" />
+                <element signature="e#5325#6235#0" />
+                <element signature="e#6281#6992#0" />
+                <element signature="e#7038#7504#0" />
+                <element signature="e#7093#7132#0" />
+                <element signature="e#7259#7308#0" />
+                <element signature="e#7551#8185#0" />
+                <element signature="e#7607#7646#0" />
+                <element signature="e#9283#10607#0" />
+                <element signature="e#9529#9843#0" />
+                <element signature="e#9771#9829#0" />
+                <element signature="e#9912#10008#0" />
+                <element signature="e#10648#11026#0" />
+                <element signature="e#11081#11503#0" />
+                <element signature="e#11531#15753#0" />
+                <element signature="n#!!block;n#copyOptions#0" />
+                <element signature="n#!!block;n#clone#0" />
+                <element signature="n#!!block;n#generateUUID#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>drawhelper</find>
+      <find>lable</find>
+      <find>HeadingPitchRoll</find>
+      <find>x:105.89117836,y:26.2938054,z:2096.93</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/coordinates.js" />
+        <option value="$PROJECT_DIR$/src/SimplyRoam.js" />
+        <option value="$PROJECT_DIR$/src/a.html" />
+        <option value="$PROJECT_DIR$/src/ExtendCesium.js" />
+        <option value="$PROJECT_DIR$/src/b.html" />
+        <option value="$PROJECT_DIR$/src/index.html" />
+        <option value="$PROJECT_DIR$/src/c.html" />
+        <option value="$PROJECT_DIR$/src/d.html" />
+        <option value="$PROJECT_DIR$/src/index_roam.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="width" value="1010" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="cesiumRoamDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cesiumRoamDemo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cesiumRoamDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cesiumRoamDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DrawAndAttributes" />
+    <property name="node.js.detected.package.prettier" value="true" />
+    <property name="node.js.path.for.package.prettier" value="project" />
+    <property name="node.js.selected.package.prettier" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\develop\Webstrom\cesiumRoamDemo\src" />
+      <recent name="D:\develop\Webstrom\cesiumRoamDemo\src\img" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\WLBDEVELOP\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="88315994-9d18-421e-955f-7dccd48edf6b" name="Default" comment="" />
+      <created>1519958127678</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1519958127678</updated>
+      <workItem from="1519958128918" duration="3854000" />
+      <workItem from="1519968649192" duration="5107000" />
+      <workItem from="1520210032506" duration="6925000" />
+      <workItem from="1520228937964" duration="30000" />
+      <workItem from="1520230403545" duration="1232000" />
+      <workItem from="1520238784076" duration="596000" />
+      <workItem from="1520296270320" duration="596000" />
+      <workItem from="1520311708771" duration="583000" />
+      <workItem from="1520392048368" duration="679000" />
+      <workItem from="1520399267110" duration="1792000" />
+      <workItem from="1520469821608" duration="3592000" />
+      <workItem from="1520493912052" duration="3546000" />
+      <workItem from="1520554903167" duration="13902000" />
+      <workItem from="1520814318514" duration="1454000" />
+      <workItem from="1520821591678" duration="4245000" />
+      <workItem from="1520908327036" duration="600000" />
+      <workItem from="1520986890450" duration="617000" />
+      <workItem from="1521168068701" duration="1882000" />
+      <workItem from="1521419416853" duration="18652000" />
+      <workItem from="1521505323375" duration="6220000" />
+      <workItem from="1521678780045" duration="15206000" />
+      <workItem from="1521764790009" duration="5110000" />
+      <workItem from="1522023927396" duration="3410000" />
+      <workItem from="1522054456244" duration="9379000" />
+      <workItem from="1522197408870" duration="354000" />
+      <workItem from="1522198161433" duration="1050000" />
+      <workItem from="1522283253233" duration="652000" />
+      <workItem from="1522310249682" duration="1309000" />
+      <workItem from="1522369985262" duration="2490000" />
+      <workItem from="1522629359033" duration="646000" />
+      <workItem from="1522648222390" duration="2695000" />
+      <workItem from="1522725793162" duration="1244000" />
+      <workItem from="1522820304453" duration="644000" />
+      <workItem from="1523928105328" duration="5557000" />
+      <workItem from="1523957821858" duration="701000" />
+      <workItem from="1524011200774" duration="670000" />
+      <workItem from="1524098070254" duration="1824000" />
+      <workItem from="1524184057211" duration="614000" />
+      <workItem from="1526452693861" duration="54000" />
+      <workItem from="1554251241034" duration="1857000" />
+      <workItem from="1554337307653" duration="599000" />
+      <workItem from="1554682957378" duration="599000" />
+      <workItem from="1554769460761" duration="599000" />
+      <workItem from="1554856166623" duration="599000" />
+      <workItem from="1554875034689" duration="599000" />
+      <workItem from="1554941887744" duration="599000" />
+      <workItem from="1555028790148" duration="599000" />
+      <workItem from="1555289282382" duration="599000" />
+      <workItem from="1555311662162" duration="51000" />
+      <workItem from="1555311734752" duration="88000" />
+      <workItem from="1555311845375" duration="288000" />
+      <workItem from="1555312156761" duration="53000" />
+      <workItem from="1555312239746" duration="599000" />
+      <workItem from="1555374679520" duration="599000" />
+      <workItem from="1555461609838" duration="599000" />
+      <workItem from="1555547122302" duration="1296000" />
+      <workItem from="1555632826609" duration="599000" />
+      <workItem from="1555644692111" duration="599000" />
+      <workItem from="1555892501824" duration="599000" />
+      <workItem from="1555978801676" duration="599000" />
+      <workItem from="1556065278634" duration="1430000" />
+      <workItem from="1556151531858" duration="1268000" />
+      <workItem from="1556238777278" duration="599000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="145628000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09511229" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/js" />
+    <entry file="file://$PROJECT_DIR$/src/coordinates.js" />
+    <entry file="file://$PROJECT_DIR$/src/SimplyRoam.js" />
+    <entry file="file://$PROJECT_DIR$/src/GoogleImageProvider.js" />
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/a.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/b.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="70" selection-start-line="8" selection-start-column="70" selection-end-line="8" selection-end-column="70" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/c.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1102">
+          <caret line="58" column="7" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/d.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExtendCesium.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1805">
+          <caret line="149" column="37" selection-start-line="149" selection-start-column="37" selection-end-line="149" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#39#0" />
+            <element signature="e#763#856#0" />
+            <element signature="e#944#1674#0" />
+            <element signature="e#1781#2260#0" />
+            <element signature="e#1841#2250#0" />
+            <element signature="e#1932#2236#0" />
+            <element signature="e#2265#2663#0" />
+            <element signature="e#2314#2653#0" />
+            <element signature="e#2415#2639#0" />
+            <element signature="e#3049#3153#0" />
+            <element signature="e#5325#6235#0" />
+            <element signature="e#6281#6992#0" />
+            <element signature="e#7038#7504#0" />
+            <element signature="e#7093#7132#0" />
+            <element signature="e#7259#7308#0" />
+            <element signature="e#7551#8185#0" />
+            <element signature="e#7607#7646#0" />
+            <element signature="e#9283#10607#0" />
+            <element signature="e#9529#9843#0" />
+            <element signature="e#9771#9829#0" />
+            <element signature="e#9912#10008#0" />
+            <element signature="e#10648#11026#0" />
+            <element signature="e#11081#11503#0" />
+            <element signature="e#11531#15753#0" />
+            <element signature="n#!!block;n#copyOptions#0" />
+            <element signature="n#!!block;n#clone#0" />
+            <element signature="n#!!block;n#generateUUID#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index_roam.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="26" selection-start-line="26" selection-end-line="37" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

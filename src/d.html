@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <title>page D</title>
+    
+    <style>      
+        html,body,#cesiumContainer{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: black;
+        }
+    </style>
+</head>
+<body onload="load(this);">
+<div id="cesiumContainer"></div>
+
+<div style="position: absolute; float: left;left: 10px;top: 20px; margin-right: 100px; z-index: 999999;">
+    <input id="start" type="button" value="开始" class="cesium-button">
+    <input id="ostart" type="button" value="主从开始" class="cesium-button">
+    <input id="stop" type="button" value="停止" class="cesium-button">
+    <input id="exit" type="button" value="退出" class="cesium-button">
+</div>
+<script>
+    var pos=undefined;
+    var myWindow=undefined;
+
+    function load(e){
+        console.log(e);
+        
+        pos={x:window.pageXOffset,y:window.pageYOffset};
+    }
+    
+
+    window.addEventListener("storage", function (e) {
+        var flag = localStorage.getItem("showPage");
+        window.open('','_self','');    
+        window.close();     
+        // if(eval(flag)){
+        //     myWindow.moveTo(pos.x,pos.y);
+        // }else{
+        //     myWindow.moveTo(100,100);
+        // }
+    });
+</script>
+</body>
+</html>

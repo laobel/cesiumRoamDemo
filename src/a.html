@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <title>page A</title>
+    <script src="./papaparse.min.js"></script>
+</head>
+<body>
+<input type="button" id="changeCSV" value="修改csv文件">
+<input type="button" id="switch" value="隐藏窗口">
+<input type="button" id="test" value="测试">
+</body>
+<script>
+    localStorage.setItem('datas', "");
+    var n=0;
+
+    document.getElementById('changeCSV').onclick = function(){
+        localStorage.setItem("flags",'1');
+        if(n>3){
+            n=0;
+        }
+
+        Papa.parse('./data/'+n+'.csv', {
+            download: true,
+            complete: function(results) {
+                var data = results.data;
+                localStorage.setItem('datas', JSON.stringify(data));
+                n++;
+            }
+        });
+
+    }
+
+    document.getElementById('switch').onclick = function(ev){
+        if(ev.target.value==='隐藏窗口'){
+            localStorage.setItem('showPage', false);
+            ev.target.value='打开窗口'
+        }else{
+            localStorage.setItem('showPage', true);
+            ev.target.value='隐藏窗口'
+        }
+    }
+    var flag=true;
+    
+    document.getElementById('test').onclick = function(ev){
+        if(flag){
+           window.
+            flag=false;
+        }else{
+            myWindow.moveTo(100,100);
+            flag=true;
+        }
+    }
+
+</script>
+</html>
